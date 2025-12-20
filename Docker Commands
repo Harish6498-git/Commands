@@ -15,3 +15,4 @@ docker run -- name=app -d -p 2828:80 --link=mydb wordpress  ( DNS resolution lik
 docker exec -it <containerID> /bin/sh          ( went inside to the container )
 docker run --name=mydb -d -e MYSQL_ROOT_PASSWORD=test mysql ( passing mysql environmental variables like password while executing the container )    
 docker build -t image:v1 .                     ( build the docker image based on docker file )
+docker build -f Dockerfileone -t image:v1 .    ( -f flag need to be mention when do you have a different file name other than that "Dockerfile" )
