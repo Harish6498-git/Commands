@@ -1,0 +1,14 @@
+docker run --name=webapp -d -p 8787:80 nginx   ( localhost:8787 )
+docker run --name=webapp -d -P nginx           ( docker will assigned port number if you mention flag -P and the port range should be 0-65565 )
+docker run --rm --name=webapp -d nginx
+docker inspect <containerID>                   ( details and events of container ID )
+docker container ls                            ( running containers )
+docker container ls -a                         ( hidden and stopped containers )
+docker system prune -a                         ( delete all components in docker host )
+docker rm -f $( docker ps -aq )                ( delete all docker image with single command )
+docker images                                  ( to identify which images are present )
+docker rmi <image name>                        ( to delete single image in current list )
+docker commit <containerID> <Image name>       ( convert running container to docker iamge )
+docker run -- name=mydb -d -p 5757:3306 mysql
+docker run -- name=app -d -p 2828:80 --link=mydb wordpress ( DNS resolution like connection between two different container using flag --link through CLI )
+
