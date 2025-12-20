@@ -13,3 +13,4 @@ docker run -- name=mydb -d -p 5757:3306 mysql
 docker run -- name=app -d -p 2828:80 --link=mydb wordpress  ( DNS resolution like connection between two different container using flag --link through CLI )
 docker exec -it <containerID> /bin/sh          ( went inside to the container )
 docker run --name=mydb -d -e MYSQL_ROOT_PASSWORD=test mysql ( passing mysql environmental variables like password while executing the container )    
+docker build -t image:v1 .                     ( build the docker image based on docker file )
