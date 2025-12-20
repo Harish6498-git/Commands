@@ -10,5 +10,6 @@ docker images                                  ( to identify which images are pr
 docker rmi <image name>                        ( to delete single image in current list )
 docker commit <containerID> <Image name>       ( convert running container to docker iamge )
 docker run -- name=mydb -d -p 5757:3306 mysql
-docker run -- name=app -d -p 2828:80 --link=mydb wordpress ( DNS resolution like connection between two different container using flag --link through CLI )
-
+docker run -- name=app -d -p 2828:80 --link=mydb wordpress  ( DNS resolution like connection between two different container using flag --link through CLI )
+docker exec -it <containerID> /bin/sh          ( went inside to the container )
+docker run --name=mydb -d -e MYSQL_ROOT_PASSWORD=test mysql ( passing mysql environmental variables like password while executing the container )    
