@@ -1,3 +1,6 @@
+sudo apt-get install docker.io -y              ( install docker on server )
+sudo systemctl start docker                    ( start the docker engine )
+sudo systemctl status docker                   ( status of docker deamon )
 docker run --name=webapp -d -p 8787:80 nginx   ( localhost:8787 )
 docker run --name=webapp -d -P nginx           ( docker will assigned port number if you mention flag -P and the port range should be 0-65565 )
 docker run --rm --name=webapp -d nginx
