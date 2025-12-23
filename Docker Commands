@@ -40,3 +40,7 @@ docker run --name=app -v <volume name>:/inside -d nginx ( attach the exist volum
 docker run --name=app -v <volume name>:/inside -v <volume name>:/inside -d nginx ( attach multiple volumes at a time )
 docker volume inspect <volume name>            ( inspect the volumes )
 docker volume prune                            ( clear or delete the available volumes on the docker host )
+docker network ls                              ( to list the network present in docker host )
+docker network create --driver=bridge <network name> ( to create the custom network )
+docker network inspect <network name>          ( to inspect the network )
+docker run --name=c1 -d -it --network=test busybox ( to attach custom network while creating the container )
