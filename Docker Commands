@@ -44,3 +44,5 @@ docker network ls                              ( to list the network present in 
 docker network create --driver=bridge <network name> ( to create the custom network )
 docker network inspect <network name>          ( to inspect the network )
 docker run --name=c1 -d -it --network=test busybox ( to attach custom network while creating the container )
+docker compose config                          ( before apply the environment variables file just to confirm which values are passing )
+docker compose --env-file=./.env.prod config   ( different environment variables file name ex: .env.prod )
